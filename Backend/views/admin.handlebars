@@ -1,0 +1,40 @@
+<div class="page-container">
+
+    {{#if user}}
+        <h1>Welcome to admin page</h1>
+        <h2>All movies</h2>
+
+        <label name="Add a new movie">
+            <a href="/movies/add-movie/" class="btn">
+                    Add new movie
+            </a>
+        </label>
+
+        <div class="movie-container">
+        {{#each movies}}
+            <div class="movie-card">
+            <a href="/movies/{{this._id}}" class="movie-link">
+                <h3>{{this.title}} </h3>
+                <img src="{{this.image}}" alt="{{this.alt}}" width="100%">
+            </a>
+            <p><strong>Director:</strong> {{this.director}}</p>
+            <p><strong>Release date:</strong> {{this.releaseDate}}</p>
+            <p><strong>Genres:</strong> {{this.genres}}</p>
+            <p><strong>Rating:</strong> {{this.rating}}</p>
+            <p><strong>Watched:</strong> {{this.watched}}</p>
+            <a href="/movies/edit/{{this._id}}" class="btn">Edit Movie</a>         
+            <form action="/movies/delete/{{this._id}}" method="POST">
+                <button type="button" onclick="confirmDelete(this)">Delete</button>
+            </form>
+            </div>
+        {{/each}}
+    </div>
+
+    {{else}}
+        <script>
+            window.location.href = "/login";
+        </script>
+    {{/if}}
+</div>
+
+<script src="/script.js"></script>

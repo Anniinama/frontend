@@ -38,3 +38,6 @@ Adding clickable element to movie cards:
 Issues with the m,oviecards position:
     Thank you it works, but it opens the movie card very stragenly and wont show full movie info in the center of the page, could you help me fix this please?
     Thank you! It looks great now, but its on the left side of the page. I would like it to be in the center
+
+Fixing lightmode:
+    Thank you! Now the issue is, that in light mode, the titles and headers completely dissappear and dont change color to contrast the background

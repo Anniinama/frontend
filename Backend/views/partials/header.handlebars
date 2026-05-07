@@ -1,0 +1,26 @@
+<header class="site-header">
+    <div class="topbar">
+        <a href="/" class="site-logo" aria-label="Temumdb homepage"> Temumdb</a>
+
+        <nav>
+            <ul class="main-nav">
+                <li><a href="/movies-page">Movies</a></li>
+                <li>
+                    {{!-- in case logged in: will show log out on nav--}}
+                    {{#if user}}
+                        <a href="/logout">Logout</a>
+                        <a href="/admin">Admin page</a>
+                    {{else}}
+                        <a href="/login">Login</a>
+                    {{/if}}
+                </li>               
+            </ul>
+            {{!-- Search movie kenttä --}}
+            <form action="/search" method="POST">
+            <label for="searchInput" class="visuallyhidden">Search for a movie:</label>
+                <input type="text"name="key" id="searchInput" placeholder="Search movies...">
+                <button id="searchButton">Search</button>
+            </form>
+        </nav>
+    </div>
+</header>

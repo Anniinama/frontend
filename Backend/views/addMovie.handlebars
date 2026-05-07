@@ -1,0 +1,44 @@
+<div class="page-container"> 
+    <h1>Add Movie</h1>
+
+    <h2>Input movie info:</h2>
+    {{!-- Elokuvakortti ja tiedot --}}
+    <div class="input-form">
+            <form action="/api/movies" method="POST" enctype="multipart/form-data">
+                <label for="title">Movie title:</label>
+                <input type="text" name="title" id="title" value="{{movie.title}}">
+
+                <label for="director">Director:</label>
+                <input type="text" name="director" id="director" value="{{movie.director}}">
+
+                <label for="releaseDate">Release Date:</label>
+                <input type="date" name="releaseDate" id="releaseDate" value="{{movie.releaseDate}}">
+
+                <label for="genres">Genres:</label>
+                <select name="genres" id="genres" value="{{movie.genres}}">
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Action">Action</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Animation">Animation</option>
+                </select>
+    
+                <label for="rating">Rating:</label> 
+                <input type="double" name="rating" id="rating"  value="{{movie.rating}}">
+                
+                <label for="watched">Watched:</label>
+                <input type="checkbox" name="watched" id="watched">
+                
+                <label for="image">Image:</label>
+                <input type="file" name="image" id="image" >
+                    
+                <label for="alt">Alt text:</label>
+                <input type="text" name="alt" id="alt" value="{{movie.alt}}">
+
+                <label for="description">Description of the movie:</label>
+                <input type="text" name="description" id="description" value="{{movie.description}}">
+
+                <button type="submit">Save</button>
+            </form>
+    </div>
+</div>

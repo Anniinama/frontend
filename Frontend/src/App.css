@@ -17,7 +17,7 @@ body {
 
 .light {
   background: #f1f5f9;
-  color: black;
+  color: #111827;
 }
 
 /* HEADER */
@@ -188,4 +188,38 @@ input, select, button {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+.header h1,
+.header p,
+.card h2,
+.card p,
+.card-info,
+.modal h2,
+.modal p {
+  color: inherit;
+}
+
+.description {
+  opacity: 0.85;
+}
+
+.light .card {
+  background: white;
+  color: #111827;
+}
+
+.dark .card {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.light .modal {
+  background: white;
+  color: #111827;
+}
+
+.dark .modal {
+  background: #1e293b;
+  color: white;
 }

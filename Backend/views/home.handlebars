@@ -1,0 +1,32 @@
+<main>
+    <div class="page-container">
+
+        <h1 class="visuallyhidden">TemuMDB - movie database </h1>
+
+        <section>
+            <img 
+                src="/images/movie.png" 
+                alt="Four people watching movies together"
+                width="1000"
+            >
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section aria-labelledby="newest-movies">
+            <h2 id="newest-movies">Newest movies</h2>
+        </section>
+
+        <div class="movie-container">
+            {{#each newestMovies}}
+                <article class="movie-card">
+                    <a href="/movies/{{this._id}}" class="movie-link">
+                    <h3>{{this.title}} </h3>
+                    <img src="{{this.image}}" alt="{{this.alt}}" width="100%">
+                    </a>
+                </article>
+            {{/each}}
+        </div>
+
+    </div>
+</main>

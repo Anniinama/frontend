@@ -1,22 +1,41 @@
 body {
   margin: 0;
   font-family: Arial;
+  background: black;
 }
 
 .app {
   min-height: 100vh;
   padding: 30px;
-  transition: 0.3s;
+
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease infinite;
+
+  transition:
+    background 0.5s ease,
+    color 0.3s ease;
 }
 
 /* THEMES */
-.dark {
-  background: #0f172a;
+.app.dark {
+  background: linear-gradient(
+    135deg,
+    #020617 0%,
+    #0f172a 35%,
+    #1e3a8a 100%
+  );
+
   color: white;
 }
 
-.light {
-  background: #f1f5f9;
+.app.light {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #dbeafe 50%,
+    #93c5fd 100%
+  );
+
   color: #111827;
 }
 
@@ -222,4 +241,24 @@ input, select, button {
 .dark .modal {
   background: #1e293b;
   color: white;
+}
+
+.dark,
+.light {
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

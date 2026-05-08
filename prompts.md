@@ -41,3 +41,6 @@ Issues with the m,oviecards position:
 
 Fixing lightmode:
     Thank you! Now the issue is, that in light mode, the titles and headers completely dissappear and dont change color to contrast the background
+
+Changes in the CSS :
+     I would like to change the background to a gradient color with the light and dark mode. Could you please change the previouis CSS code to match this request?
